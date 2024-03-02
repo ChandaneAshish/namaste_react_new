@@ -44,7 +44,8 @@ const title = (
 // Functional components >> NEW
 
 //React functional components
-
+//const HeadingComponent2=()=> h1 className="heading">Namaste React Functional Conponents</h1>;
+//OR
 const HeadingCompoent2 = () => {
   return <h1 className="heading">Namaste React Functional Conponents</h1>;
 };
