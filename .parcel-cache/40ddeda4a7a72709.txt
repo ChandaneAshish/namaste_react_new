@@ -7,7 +7,7 @@
 120D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\nth-check\lib\parse.d.ts133406547156727009 0
 117D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\css-tree\package.json133406547187393508 0
 152D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@swc\helpers\_\_initializer_define_property\package.json133406547186022946 0
-89D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\App.js133407418622900929 0
+89D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\App.js133650139519429020 0
 108D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\svgo\LICENSE133406547131167175 0
 106D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\domhandler133406547146309805 1
 150D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@msgpackr-extract\msgpackr-extract-win32-x64\README.md133406547139749502 0
@@ -30,7 +30,7 @@
 102D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\braces133406547144918852 1
 135D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\css-tree\cjs\syntax\atrule\supports.cjs133406547176212615 0
 132D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\lmdb\node_modules\msgpackr\README.md133406547165864552 0
-87D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist133407418624941932 1
+87D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist133650139564741695 1
 121D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\hash\package.json133406547144210796 0
 182D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\pseudo\nth-last-of-type.js133406547172052575 0
 133D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\csso\node_modules\css-tree\cjs\parser133406547174481148 1
@@ -47,7 +47,7 @@
 136D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\csso\node_modules\css-tree\cjs\generator133406547175188728 1
 126D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\source-map\lib\mapping-list.js133406547147922232 0
 145D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\css-select\node_modules\entities\lib\index.js.map133406547166073671 0
-93D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\index.html133406565753797667 0
+93D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\index.html133518821615407823 0
 120D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\entities\lib\encode.d.ts133406547156932720 0
 139D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\caniuse-lite\data\features\pad-start-end.js133406547204542413 0
 92D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\index.css133393236640761401 0
@@ -1769,7 +1769,7 @@
 161D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\types.d.ts.map133406547156596941 0
 125D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\dom-serializer\lib\index.d.ts133406547152676762 0
 117D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\posthtml\lib\index.js133406547140979768 0
-106D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.9e4c6fd2.css133407381150055606 0
+106D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.9e4c6fd2.css133650139561745055 0
 120D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\postcss-value-parser\lib133406547147595760 1
 145D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\caniuse-lite\data\features\input-email-tel-url.js133406547194431210 0
 118D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\css-tree\lib\tokenizer133406547187213014 1
@@ -4890,7 +4890,7 @@
 130D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\utils\src\openInBrowser.js133406547167069672 0
 131D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\utils\src\parseCSSImport.js133406547167180626 0
 129D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\utils\src\prettifyTime.js133406547167512247 0
-105D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.7826abd7.js133407418624776228 0
+105D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.7826abd7.js133650139564462434 0
 133D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\utils\src\prettyDiagnostic.js133406547167840964 0
 133D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\utils\src\progress-message.js133406547167931587 0
 135D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\utils\src\relativeBundlePath.js133406547168602395 0
@@ -5406,7 +5406,7 @@
 157D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\general.js133406547146204323 0
 157D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\index.d.ts133406547158700816 0
 161D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\index.d.ts.map133406547154592294 0
-109D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.7826abd7.js.map133407418624931996 0
+109D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.7826abd7.js.map133650139564691830 0
 183D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\tokenizer\char-code-definitions.js133406547152216043 0
 155D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\index.js133406547147140440 0
 165D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\procedure.d.ts.map133406547155392523 0
@@ -5976,5 +5976,5 @@
 109D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\.bin\svgo.ps1133406547213869906 0
 123D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\.bin\update-browserslist-db133406547213869906 0
 127D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\node_modules\.bin\update-browserslist-db.ps1133406547213869906 0
-110D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.9e4c6fd2.css.map133407381150095599 0
-98D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.html133407381151793785 0
+110D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.9e4c6fd2.css.map133650139561949181 0
+98D:\Udemy Courses\React_Akshay_Saini\namaste-react\Episode-03 Laying the foundation\dist\index.html133650139562557567 0

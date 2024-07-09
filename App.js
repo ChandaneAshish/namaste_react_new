@@ -18,6 +18,20 @@ import ReactDOM from "react-dom/client";
 //   </h1>
 // );
 
+//React component using normal JS function
+
+const Title1 = function () {
+  return (
+    <h1
+      id="heading"
+      className="head"
+      tabIndex="5">
+      Namaste React using JSX
+    </h1>
+  );
+};
+
+// React function using arrow function
 const Title = () => (
   <h1
     id="heading"
@@ -56,6 +70,7 @@ const HeadingCompoent = () => (
     {title}
     {Title()}
     <Title />
+    <Title></Title>
     <h1 className="heading">Namaste React Functional Components</h1>
   </div>
 );
