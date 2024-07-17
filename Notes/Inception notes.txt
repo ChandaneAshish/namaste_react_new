@@ -1,0 +1,76 @@
+1. What is Emmmet?
+- Emmet is a powerful plugin for increasing productivity for Web developer as HTML and CSS. 
+  This plugin is available for various tools, IDEs. This plugin is helping us to write less
+  and generate automatically.
+
+2. Difference between a Library and Framework.
+-  Library:- A Library is a chunk of code applying to only certain part of our project. The Library 
+   provide various feature to an app. A Library contains various files and we can use the library by 
+   install particular library and by using "import" command we will use this in our app.
+
+   Framework:- A Framework is a foundation of any project. Mostly A Framework is associated with A
+   programming language. A Framework is providing foundation such that we do not need to write 
+   everything from scratch. As Example:- During building a home we need a foundation.
+
+3. What is CDN? Why do we use it?
+-  CDN:- A CDN is Content Delivery Network. It will help to import any library or file inside our
+   project without installing it. It will just provide a link to library or file.It has provide a 
+   network to a content therefore it is called as CDN. As Example We can use React As CDN also.
+
+4. Why is React known as React?
+-  The name 'React' reflects this "reactive nature of the library" 
+
+5. What is cross-origin in the script tag?
+-  First we need to understand what is CORS before moving forward to cross-origin. 
+
+   CORS( Cross Origin Resource Sharing ):- CORS is HTTP-header based mechanism which allow us to
+   sharing resource between two different region( region may be like domain base, protocol base,
+   port etc).            
+     For security purpose, browser restricts us to access any other region file or third party file.
+   but We can enable this by writing cross-origin attribute inside our Script Tag.
+
+6. What is the difference between React and ReactDOM?
+-  React is a JavaScript library which is responsible for building user interface while ReactDOM 
+   deals with JavaScript DOM Elements.
+   React is responsible for creating HTML elements and its contents while ReactDOM is responsible for
+   creating root and rendering the HTML elements. 
+
+7. What is difference between react.development.js and react.production.js files via CDN?
+-  When I importing react.development.js file via CDN then CDN will load development environment
+   library but when i importing react.production.js then CDN loaded production environment react library 
+   to our project.
+      As a developer, We must importing Development Environment library for developing a project from
+   scratch.
+
+8. What are async and defer?
+-  As Now, Execution process of element is fixed and therefore one element is dependented on process
+   /execution of other element. A Process of current element is waiting until execution of previous
+   element is not completed. Therefore some process goes on sleep mode for some
+   time until previous is not completed. Therefore Asynchronous process and Parallel processing
+   comes in picture.
+
+   Lets take a condition to understand clearly:-
+   Suppose, Initially I have only html but during parsing of HTML A javascript Script tag comes in
+   picture the waht happens:-
+
+   a. Normally:-
+        When a html parsing is going on and a script comes in picture then html parsing paused and 
+    It first fetch the script and then it execute the script and after completion of script our html 
+    again start pasing .     
+    
+
+   b. async:-
+        When a html parsing is going on and a script comes in picture then fetch the script from 
+    network parallely with html parsing but html parsing stop when fetching of script is done and 
+    now it start executing script until it is not completed after completion of script execution
+    html parsing again continue.
+
+   c. defer:-
+        When a html parsing is going on and a script comes in picture then it first complete the html
+    parsing and after completion of html parsing it start fetching the script and after that executing
+    the script.          
+
+
+
+
+      
