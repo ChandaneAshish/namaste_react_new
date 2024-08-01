@@ -56,6 +56,19 @@ yarn, or whatever your preferred package manager is) OR npm install npm@latest
 > https://github.com/acdlite/react-fiber-architecture
 
 # chapter 7 rounting
+//if no dependency array => useEffect is called at every render
+//useEffect(()=>{})
 
--react-router-dom -createReactRouter -RouterProvider -path, element,
-errorElement -useRouteError
+//if dependency array is empty=> useEffect is called at initial render (just
+once) // useEffect(() => { // console.log("useEffect rendered"); // }, []);
+
+//if dependency array is not empty (ex. contains btnNameReact)=> useEffect is
+called everytime the btnNameReact is updated // useEffect(() => { //
+console.log('useEffect Rendered'); //}, [loginBtn]);
+
+> react-router-dom
+
+- > > createReactRouter -path, element, errorElement
+- > > RouterProvider
+- > > useRouteError
+
