@@ -59,3 +59,8 @@ yarn, or whatever your preferred package manager is) OR npm install npm@latest
 
 -react-router-dom -createReactRouter -RouterProvider -path, element,
 errorElement -useRouteError
+
+# two types of routing in web applications
+
+1. client side routing
+2. server side routing

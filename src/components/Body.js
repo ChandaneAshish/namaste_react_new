@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 //not using keys(not acceptable) < index as key < unique id
 
@@ -203,10 +204,16 @@ const Body = () => {
           ))} */}
         {/* {listOfRestaurants.map((restaurant) => ( */}
         {filteredRestaurant.map((restaurant) => (
-          <RestaurantCard
+          /*  <RestaurantCard
             key={restaurant.info.id}
             resData={restaurant}
-          />
+          /> */
+          <Link
+            key={restaurant.info.id}
+            to={"restaurants/" + restaurant.info.id}>
+            {" "}
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
         {/* <RestaurantCard
             resName="KFC"
