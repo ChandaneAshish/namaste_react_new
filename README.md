@@ -59,3 +59,9 @@ yarn, or whatever your preferred package manager is) OR npm install npm@latest
 
 -react-router-dom -createReactRouter -RouterProvider -path, element,
 errorElement -useRouteError
+
+# Chapter 8 Class based component
+
+NEVER UPDATE STATE VARIABLE DIRECTLY
+
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
