@@ -6,15 +6,15 @@ class About extends Component {
   constructor(props) {
     super(props);
 
-    console.log("Parent constructor called");
+    //console.log("Parent constructor called");
   }
 
   componentDidMount() {
-    console.log("Parent Component did mount called");
+    //console.log("Parent Component did mount called");
   }
 
   render() {
-    console.log("Parent render called");
+    //console.log("Parent render called");
     return (
       <div className="about">
         <h1>About Us</h1>
@@ -25,14 +25,14 @@ class About extends Component {
           name={"First"}
           location={"Pune (class component)"}
         />
-        <UserClass
+        {/* <UserClass
           name={"Second"}
           location={"US"}
         />
         <UserClass
           name={"Third"}
           location={"UK"}
-        />
+        /> */}
       </div>
     );
   }
@@ -71,5 +71,26 @@ Render phase >>
 - Parent Component did mount called
 
 */
+
+/***
+ * COMPONENT LIFECYCLE
+ *
+ * ---MOUNTING-----
+ *
+ * Constructor (dummy)
+ * Render (dummy)
+ *      <HTML  dummy>
+ * Component Did Mount
+ *      <API call>
+ *      <this.setState> -> State variable is updated
+ *
+ *
+ * ---UPDATE----
+ *
+ * Render(API data)
+ *      <HTML (new API data)>
+ * Component Did Update
+ *
+ *   */
 
 export default About;

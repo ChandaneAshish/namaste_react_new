@@ -65,3 +65,40 @@ errorElement -useRouteError
 NEVER UPDATE STATE VARIABLE DIRECTLY
 
 https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+https://api.github.com/users/chandaneashish
+
+/\* Render phase >>
+
+- Parent constructor called
+- Parent render called -- First constructor called -- First render called --
+  Second constructor called -- Second render called -- Third constructor called
+  -- Third render called
+
+> > <DOM manupulation pase> Commit phase --First component did mount called
+> > --Second component did mount called --Third component did mount called
+
+- Parent Component did mount called
+
+\*/
+
+/\*\*\*
+
+- COMPONENT LIFECYCLE
+-
+- ---MOUNTING-----
+-
+- Constructor (dummy)
+- Render (dummy)
+-      <HTML  dummy>
+- Component Did Mount
+-      <API call>
+-      <this.setState> -> State variable is updated
+-
+-
+- ---UPDATE----
+-
+- Render(API data)
+-      <HTML (new API data)>
+- Component Did Update
+-
+- \*/

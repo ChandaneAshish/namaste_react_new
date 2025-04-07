@@ -18,7 +18,7 @@ const Header = () => {
 
   //if dependency array is not empty (ex. contains btnNameReact)=> useEffect is called everytime the btnNameReact is updated
   useEffect(() => {
-    console.log("useEffect Rendered");
+    //console.log("useEffect Rendered");
   }, [btnNameReact]);
 
   return (
