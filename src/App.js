@@ -1,13 +1,15 @@
-import React, { lazy, Suspense } from 'react';
-import ReactDOM from 'react-dom/client';
-import Header from './components/Header';
-import Body from './components/Body';
+import React, { lazy, Suspense, useEffect, useState } from "react";
+import ReactDOM from "react-dom/client";
+import UserContext from "./utils/UserContext.js";
+import Header from "./components/Header";
+import Body from "./components/Body";
 //import About from './components/About';
-import Contact from './components/Contact';
-import Error from './components/Error';
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import RestaurantMenu from './components/RestaurantMenu';
-import Shimmer from './components/Shimmer';
+import Contact from "./components/Contact";
+import Error from "./components/Error";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import RestaurantMenu from "./components/RestaurantMenu";
+import Shimmer from "./components/Shimmer";
+
 //import Grocery from './components/Grocery';
 
 // Chunking
@@ -17,62 +19,78 @@ import Shimmer from './components/Shimmer';
 // on demand loading
 // dynamic import
 
-const Grocery = lazy(() => import('./components/Grocery'));
-const About = lazy(() => import('./components/About'));
+const Grocery = lazy(() => import("./components/Grocery"));
+const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+  useEffect(() => {
+    // Make an API call and send username and password
+    const data = {
+      name: "Ashish Chandane",
+    };
+    setUserName(data.name);
+  }, []);
+
   return (
-    <div className='app'>
-      <Header />
-      {/* if path is "/" */}
-      {/* <Body /> */}
+    //default
+    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+      {/* Ashish Chandane */}
+      <div className="app">
+        {/* <UserContext.Provider value={{ loggedInUser: "Namaste Star" }}> */}
+        {/* Namaste Star */}
+        <Header />
+        {/* </UserContext.Provider> */}
+        {/* if path is "/" */}
+        {/* <Body /> */}
 
-      {/* if path is "/about" */}
-      {/* <About /> */}
+        {/* if path is "/about" */}
+        {/* <About /> */}
 
-      {/* if path is "/contact" */}
-      {/* <Contact /> */}
+        {/* if path is "/contact" */}
+        {/* <Contact /> */}
 
-      {/* The above configuration can be achieve using children and Outlet */}
+        {/* The above configuration can be achieve using children and Outlet */}
 
-      <Outlet />
-    </div>
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 
 const appRouter = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <AppLayout />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Body />,
       },
       {
-        path: '/about',
+        path: "/about",
         element: (
           <Suspense fallback={<Shimmer />}>
-            {' '}
+            {" "}
             <About />
           </Suspense>
         ),
       },
       {
-        path: '/contact',
+        path: "/contact",
         element: <Contact />,
       },
       {
-        path: '/grocery',
+        path: "/grocery",
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
-            {' '}
+            {" "}
             <Grocery />
           </Suspense>
         ),
       },
       {
-        path: '/restaurants/:resId',
+        path: "/restaurants/:resId",
         element: <RestaurantMenu />,
       },
     ],
@@ -88,6 +106,6 @@ const appRouter = createBrowserRouter([
   }, */
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 //root.render(<AppLayout />);
 root.render(<RouterProvider router={appRouter} />);

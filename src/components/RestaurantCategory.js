@@ -6,6 +6,10 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   // const handleClick = () => {
   //   setShowItem(!showItem);
   // };
+  const handleClick = () => {
+    setShowIndex();
+  };
+
   return (
     <div>
       {/* Accordian Header */}

@@ -1,11 +1,12 @@
 import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import resList from "../utils/mockData";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useRestaurantCard from "../utils/useRestaurantCard";
 import { RESTAURANTS_API } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 //not using keys(not acceptable) < index as key < unique id
 
@@ -123,7 +124,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.61610&lng=73.72860&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
+    //console.log(json);
 
     setListOfRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -151,10 +152,12 @@ const Body = () => {
   //     ?.restaurants
   // );
 
-  console.log(filteredRestaurant);
+  //console.log(filteredRestaurant);
 
   if (onlineStatus === false)
     return <h1>You are offline!!! Please check your internet status</h1>;
+
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   //COnditional rendering
   // if (listOfRestaurants.length === 0) {
@@ -305,6 +308,13 @@ const Body = () => {
             }}>
             Top Rated Restaurants
           </button>
+        </div>
+        <div>
+          <label>UserName: </label>
+          <input
+            className="border border-black p-2"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}></input>
         </div>
       </div>
       <div className="flex flex-wrap">

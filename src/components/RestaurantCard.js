@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 /* const styleCard = {
   backgroundColor: '#f0f0f0',
@@ -9,6 +11,8 @@ import { CDN_URL } from "../utils/constants";
 const RestaurantCard = (props) => {
   //const { resName, cuisine } = props;
   const { resData } = props;
+
+  const { loggedInUser } = useContext(UserContext);
 
   //in resData? the ? is used for optional chaining
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo } =
@@ -75,6 +79,7 @@ const RestaurantCard = (props) => {
       <h4>{avgRating} Stars</h4>
       <h4>{costForTwo}</h4>
       <h4>{deliveryTime} minuites</h4>
+      <h4>User: {loggedInUser} </h4>
     </div>
   );
 };
