@@ -118,3 +118,30 @@ https://api.github.com/users/chandaneashish
 - Suspense component
 
 - Git commands git pull --tags --allow-unrelated-histories origin ep-09
+
+# Chapter 10 JO DIKHTA HAI VO BIKATA HAI
+
+- CSS
+- Normal CSS writing
+- SASS, SCSS
+- Styled components, Material UI, Bootstarp, Chakra UI, Ant-design
+- Tailwind CSS Framework
+  > > PostCSS .postcssrc,  
+  > > .px, py : x menas x axis and y means y axis. For Hardcore value w-[200px]
+
+# Chapter 11 Data is the New Oil
+
+- HOC
+- Data layer and UI layer
+- React developer tool Components Profiler
+- Lifting the state (react.dev) Controlled and uncontrolled components
+- props drilling
+- React Context ()
+- For functional components useContext hook
+- For class based components <Context.Consumer></Context.Consumer>
+  > > > > <UserContext.Consumer> {()=>()} </UserContext.Consumer>
+- For modifying the context <Context.Provider></Context.Provider>
+  > > <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+  > >
+  > > > > </Header> 
+  > > > > </UserContext.Provider>

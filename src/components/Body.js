@@ -309,7 +309,7 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
-        <div>
+        <div className="search m-4 p-4 flex items-center">
           <label>UserName: </label>
           <input
             className="border border-black p-2"
