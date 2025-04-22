@@ -1,0 +1,123 @@
+import { LOGO_URL } from "../utils/constants";
+import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
+
+const Header = () => {
+  const onlineStatus = useOnlineStatus();
+
+  const { loggedInUser } = useContext(UserContext);
+  //let btnName = "Login";
+  const [btnNameReact, setBtnNameReact] = useState("Login");
+  //CHecking if the whole component is render
+  //console.log("Header rendered");
+
+  //if no dependency array => useEffect is called at every render
+  //useEffect(()=>{})
+
+  //if dependency array is empty=> useEffect is called at initial render (just once)
+  // useEffect(() => {
+  //   console.log("useEffect rendered");
+  // }, []);
+
+  //if dependency array is not empty (ex. contains btnNameReact)=> useEffect is called everytime the btnNameReact is updated
+  useEffect(() => {
+    //console.log("useEffect Rendered");
+  }, [btnNameReact]);
+
+  //Subscribing to store using selector
+  const cartItems = useSelector((store) => store.cart.items);
+
+  console.log(cartItems);
+
+  // return (
+  //   <div className="header">
+  //     <div className="logo-container">
+  //       <img
+  //         className="logo"
+  //         src={LOGO_URL}
+  //       />
+  //     </div>
+  //     <div className="nav-items">
+  //       <ul>
+  //         <li>Online Status: {onlineStatus === true ? "✅" : "🔴"}</li>
+  //         <li>
+  //           <Link to="/">Home</Link>
+  //         </li>
+  //         <li>
+  //           <Link to="/about">About</Link>{" "}
+  //         </li>
+  //         <li>
+  //           <Link to="/contact">Contact us</Link>{" "}
+  //         </li>
+  //         <li>
+  //           <Link to="/grocery">Grocery</Link>{" "}
+  //         </li>
+  //         <li>Cart</li>
+  //         <button
+  //           className="login"
+  //           onClick={() => {
+  //             // btnName = "Logout";
+  //             // console.log(btnName);
+  //             btnNameReact === "Login"
+  //               ? setBtnNameReact("Logout")
+  //               : setBtnNameReact("Login");
+  //           }}>
+  //           {btnNameReact}
+  //         </button>
+  //       </ul>
+  //     </div>
+  //   </div>
+  // );
+
+  //USING TAILWIND CSS
+
+  return (
+    <div className="flex justify-between bg-pink-100 shadow-lg m-2 sm:bg-yellow-100 lg:bg-green-100 ">
+      <div className="logo-container">
+        <img
+          className="w-40"
+          src={LOGO_URL}
+        />
+      </div>
+      <div className="flex items-center">
+        <ul className="flex p-4 m-4 text-2xl">
+          <li className="px-4">
+            Online Status: {onlineStatus === true ? "✅" : "🔴"}
+          </li>
+          <li className="px-4">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="px-4">
+            <Link to="/about">About</Link>{" "}
+          </li>
+          <li className="px-4">
+            <Link to="/contact">Contact us</Link>{" "}
+          </li>
+          <li className="px-4">
+            <Link to="/grocery">Grocery</Link>{" "}
+          </li>
+          <li className="px-4 font-bold text-xl">
+            Cart- {cartItems.length} items
+          </li>
+          <button
+            className="login"
+            onClick={() => {
+              // btnName = "Logout";
+              // console.log(btnName);
+              btnNameReact === "Login"
+                ? setBtnNameReact("Logout")
+                : setBtnNameReact("Login");
+            }}>
+            {btnNameReact}
+          </button>
+          <li className="px-4 font-bold">{loggedInUser}</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Header;
