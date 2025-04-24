@@ -1,16 +1,17 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
-import ReactDOM from "react-dom/client";
-import UserContext from "./utils/UserContext.js";
-import Header from "./components/Header";
-import Body from "./components/Body";
+import React, { lazy, Suspense, useEffect, useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import UserContext from './utils/UserContext.js';
+import Header from './components/Header';
+import Body from './components/Body';
 //import About from './components/About';
-import Contact from "./components/Contact";
-import Error from "./components/Error";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import RestaurantMenu from "./components/RestaurantMenu";
-import Shimmer from "./components/Shimmer";
-import { Provider } from "react-redux";
-import appStore from "./utils/appStore.js";
+import Contact from './components/Contact';
+import Error from './components/Error';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import RestaurantMenu from './components/RestaurantMenu';
+import Shimmer from './components/Shimmer';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore.js';
+import Cart from './components/Cart.js';
 
 //import Grocery from './components/Grocery';
 
@@ -21,25 +22,25 @@ import appStore from "./utils/appStore.js";
 // on demand loading
 // dynamic import
 
-const Grocery = lazy(() => import("./components/Grocery"));
-const About = lazy(() => import("./components/About"));
+const Grocery = lazy(() => import('./components/Grocery'));
+const About = lazy(() => import('./components/About'));
 
 const AppLayout = () => {
   const [userName, setUserName] = useState();
   useEffect(() => {
     // Make an API call and send username and password
     const data = {
-      name: "Ashish Chandane",
+      name: 'Ashish Chandane',
     };
     setUserName(data.name);
   }, []);
 
   return (
     <Provider store={appStore}>
-      //default
+      {/* default */}
       <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
         {/* Ashish Chandane */}
-        <div className="app">
+        <div className='app'>
           {/* <UserContext.Provider value={{ loggedInUser: "Namaste Star" }}> */}
           {/* Namaste Star */}
           <Header />
@@ -64,38 +65,42 @@ const AppLayout = () => {
 
 const appRouter = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <AppLayout />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Body />,
       },
       {
-        path: "/about",
+        path: '/about',
         element: (
           <Suspense fallback={<Shimmer />}>
-            {" "}
+            {' '}
             <About />
           </Suspense>
         ),
       },
       {
-        path: "/contact",
+        path: '/contact',
         element: <Contact />,
       },
       {
-        path: "/grocery",
+        path: '/grocery',
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
-            {" "}
+            {' '}
             <Grocery />
           </Suspense>
         ),
       },
       {
-        path: "/restaurants/:resId",
+        path: '/restaurants/:resId',
         element: <RestaurantMenu />,
+      },
+      {
+        path: '/cart',
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
@@ -110,6 +115,6 @@ const appRouter = createBrowserRouter([
   }, */
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(<AppLayout />);
 root.render(<RouterProvider router={appRouter} />);
