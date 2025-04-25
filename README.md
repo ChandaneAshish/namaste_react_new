@@ -141,7 +141,34 @@ https://api.github.com/users/chandaneashish
 - For class based components <Context.Consumer></Context.Consumer>
   > > > > <UserContext.Consumer> {()=>()} </UserContext.Consumer>
 - For modifying the context <Context.Provider></Context.Provider>
+
   > > <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
   > >
   > > > > </Header> 
   > > > > </UserContext.Provider>
+
+  # Chapter 12 Lets build our store
+
+- RTK, React-redux
+- slice, dispatch, actions, payload, reducer, selectors
+- useSelector, useDispatch
+- <Provider>
+- RTK query
+- Redux thung
+- Redux middleware
+
+# Chapter 13: Time for Test
+
+- Types of testing (developer)
+
+  > > Unit testing. Integration testing, End to End Testing or e2e testing React
+  > > testing library
+
+- Setting up testing in our app --
+  > > > > Install RTK -- Install JEST (-https://jestjs.io/docs/getting-started)
+  > > > > -- Instal babel dependencies -- Configure babel
+- Note: JavaScript Babel configs (e.g. babel.config.js) should be avoided. These
+  cause Parcel’s caching to be less effective, which means all of your JS files
+  will be recompiled each time you restart Parcel. To avoid this, use a
+  JSON-based config format instead (e.g. babel.config.json).
+  > > Configure Parcel config file to disable defualt babel transpilation
